@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<title></title>
+	<meta name="description" content="" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link rel="stylesheet" href="/styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+	<div class="container">
+		<section>
+			<header>
+				<h1>2.4 GHz</h1>
+			</header>
+			<form>
+				<div class="form-col">
+					<label>Wi-Fi Name</label>
+					<input type="text"></input>
+				</div>
+				<div class="form-col">
+					<label>Wi-Fi Password</label>
+					<div class="password-container">
+						<input type="password" id="password" name="password"></input>
+						<i class="fas fa-eye" style="color: #8A9CB2;"></i>
+					</div>
+				</div>
+			</form>
+			<div class="drop-down-menu">
+				<div class="drop-down-btn" onclick="showMenu()">
+					<h2>Advance Settings</h2>
+					<i class="arrow down"></i>
+				</div>
+				<div class="drop-down-content" id="hide">
+					<form>
+						<div class="form-row">
+							<div class="form-col">
+								<label>SSID Number</label>
+								<select for="numbers">
+									<option value="1" name="numbers">1</option>
+									<option value="2" name="numbers">2</option>
+									<option value="3" name="numbers">3</option>
+									<option value="4" name="numbers">4</option>
+								</select>
+							</div>
+							<div class="form-col">
+								<label>Authentication</label>
+								<select for="authentication">
+									<option value="WPA/WPA2" name="authentication">WPA/WPA2</option>
+									<option value="WPA/WPA2" name="authentication">WPA/WPA2</option>
+									<option value="WPA/WPA2" name="authentication">WPA/WPA2</option>
+									<option value="WPA/WPA2" name="authentication">WPA/WPA2</option>
+								</select>
+							</div>
+						</div>
+						<div class="form-row">
+							<div class="form-col">
+								<label>Encryption Mode</label>
+								<select for="encryption">
+									<option value="TKIP&AES" name="encryption">TKIP & AES</option>
+									<option value="TKIP&AES" name="encryption">TKIP & AES</option>
+									<option value="TKIP&AES" name="encryption">TKIP & AES</option>
+									<option value="TKIP&AES" name="encryption">TKIP & AES</option>
+								</select>
+							</div>
+							<div class="form-col">
+								<label>WPA Key Interval</label>
+								<select for="WPAKeyInterval">
+									<option value="3600" name="WPAKeyInterval">3600</option>
+									<option value="3600" name="WPAKeyInterval">3600</option>
+									<option value="3600" name="WPAKeyInterval">3600</option>
+									<option value="3600" name="WPAKeyInterval">3600</option>
+								</select>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+	</div>
+	<script src="index.js"></script>
+</body>
+
+</html>
