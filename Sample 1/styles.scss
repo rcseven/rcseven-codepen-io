@@ -132,7 +132,7 @@ body {
         height: 100%;
         padding: 32px 0;
         border: $border-color 1px solid;
-        box-shadow: 0 4px 8px #c9d4e366 inset;
+        box-shadow: 0 4px 10px #c9d4e366 inset;
         transition: max-height 0.3s ease-in-out;
         border-bottom-right-radius: 12px;
         border-bottom-left-radius: 12px;
@@ -143,14 +143,11 @@ body {
       }
 
       .arrow {
-        border: solid $border-color;
+        border: solid $primary-font-color;
         border-width: 0 3px 3px 0;
         margin-right: 32px;
         display: inline-block;
         padding: 3px;
-      }
-
-      .down {
         transform: rotate(45deg);
         -webkit-transform: rotate(45deg);
       }
