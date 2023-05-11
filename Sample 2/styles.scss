@@ -1,0 +1,255 @@
+@import url("https://fonts.cdnfonts.com/css/fs-elliot-pro");
+$primary: #263348;
+$secondary: #4d5767;
+
+$primary-bg: #ffffff;
+$secondary-bg: rgba(25, 83, 165, 0.1);
+
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "FS Elliot Pro", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+main {
+  position: relative;
+  top: 50%;
+  transform: translate(-0%, -50%);
+  margin: auto;
+
+  width: 990px;
+  height: 670px;
+  background-color: $primary-bg;
+
+  border: 1px solid rgba(38, 51, 72, 0.1);
+  box-shadow: 0px 6px 20px rgba(77, 87, 103, 0.15);
+  border-radius: 10px;
+
+  header {
+    @include flex(row, flex-start, flex-start);
+    padding: 50px 60px;
+    gap: 40px;
+
+    h1,
+    time {
+      @include flex(column, flex-start, center);
+      color: $primary;
+      font-size: 14px;
+      font-weight: 700;
+
+      #day {
+        font-size: 28px;
+      }
+
+      #broadband {
+        font-size: 32px;
+      }
+    }
+
+    h1:nth-child(2) {
+      align-items: flex-start;
+    }
+  }
+
+  section#tasks {
+    @include flex(column, flex-start, flex-start);
+    gap: 20px;
+    padding: 0 40px;
+    h2 {
+      font-size: 20px;
+      color: $primary;
+      opacity: 0.75;
+    }
+
+    .card-container {
+      @include flex(row, space-between, center);
+      width: 100%;
+
+      .card:nth-child(1) {
+        border: 3px solid transparent;
+        border-image-source: linear-gradient(
+          70.65deg,
+          #3973cb -2.29%,
+          #65c9e9 89.68%
+        );
+        border-image-slice: 1;
+
+        button {
+          position: absolute;
+          bottom: -10%;
+          left: 16%;
+          right: 16%;
+          font-size: 14px;
+          letter-spacing: 1.75px;
+          text-transform: uppercase;
+          color: #ffffff;
+          background-color: #0397e5;
+          padding: 15px 40px;
+          border: none;
+          border-radius: 24px;
+        }
+      }
+
+      .card {
+        @include flex(column, flex-start, flex-start);
+        position: relative;
+        width: 285px;
+        height: 255px;
+        gap: 16px;
+        padding-top: 32px;
+        padding-left: 32px;
+        padding-right: 22px;
+        background-color: $primary-bg;
+
+        border: 1px solid rgba(38, 51, 72, 0.1);
+        box-shadow: 0px 6px 12px rgba(216, 216, 216, 0.1);
+        border-radius: 10px;
+
+        h3 {
+          font-size: 20px;
+          color: $primary;
+          line-height: 24px;
+        }
+
+        p {
+          font-size: 16px;
+          color: $secondary;
+          opacity: 0.75;
+          width: 230px;
+          line-height: 28px;
+        }
+
+        .item-row {
+          @include flex(row, space-between, center);
+          width: 100%;
+          .time-indicator {
+            @include flex(row, flex-start, center);
+            gap: 8px;
+            padding: 8px 16px;
+            background-color: $primary-bg;
+            margin-left: -5px;
+
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            border-radius: 28px;
+
+            h4 {
+              font-size: 14px;
+              color: $primary;
+              opacity: 0.3;
+            }
+          }
+          .star-points {
+            @include flex(row, flex-start, center);
+            gap: 8px;
+
+            h4 {
+              font-size: 12px;
+              color: $primary;
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  section#mystery-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding-right: 100px;
+
+    @include flex(row, flex-start, center);
+    background-color: $secondary-bg;
+
+    figure {
+      position: relative;
+
+      #mystery-box {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 1;
+      }
+    }
+
+    .mystery-box-content {
+      h3 {
+        font-size: 24px;
+        color: $primary;
+      }
+      p {
+        font-size: 16px;
+        color: $primary;
+        opacity: 0.75;
+        width: 316px;
+      }
+    }
+    .mystery-box-content {
+      h3 {
+        font-size: 24px;
+        color: $primary;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 16px;
+        color: $primary;
+        opacity: 0.75;
+        width: 316px;
+        line-height: 26px;
+      }
+    }
+
+    .mystery-box-time {
+      @include flex(column, flex-start, flex-start);
+      gap: 8px;
+      margin-left: auto;
+      h3 {
+        font-size: 10px;
+        line-height: 12px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
+      time {
+        @include flex(row, flex-start, center);
+        gap: 8px;
+        img {
+          opacity: 0.7;
+        }
+        font-size: 14px;
+        color: #ffffff;
+      }
+      button {
+        @include flex(row, center, center);
+        background-color: #f1f5fb;
+        border: none;
+        padding: 12px 42px;
+        border-radius: 24px;
+        gap: 16px;
+
+        span {
+          font-size: 14px;
+          font-weight: 900;
+          color: $secondary;
+          opacity: 0.4;
+          letter-spacing: 1.75px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
